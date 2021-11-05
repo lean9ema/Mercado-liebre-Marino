@@ -116,3 +116,21 @@ main section article img{
 main section article i,.discount{
     color:#39b54a;
 }
+
+p.info-compra{
+    color: gray;
+    font-size: 20px;
+}
+
+.all-foot{
+    text-align: center;
+    line-height: 28px;
+}
+
+.all-foot h4{
+    text-align: left;
+}
+footer div.icono{
+    font-size: 500%;
+    background-position: center center;
+}
