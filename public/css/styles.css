@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
@@ -24,8 +25,9 @@ div.top-header{
     padding: 5%;
 }
 
-header div.logo{
-    width:50%;
+header div.logo{/*Saque la medida de html, le aplique porcentaje y lo centre*/
+    width:90%;
+    margin: auto;
 }
 header div.logo{
     padding: 10%;
@@ -78,9 +80,9 @@ div.burger-menu i{
     padding: 10px;
     width: 40px;
 }
-article div.main-article{
+/*article div.main-article{
      width: 100%;
-}
+}*/
 
 .price{
     font-size: 18px;
@@ -101,9 +103,6 @@ section.banner img{
     width: 100%;
 }
 
-main{
-    width: 90%;
-}
 
 main section article{
     background-color: #FFF;
@@ -125,12 +124,58 @@ p.info-compra{
 .all-foot{
     text-align: center;
     line-height: 28px;
+    padding: 5%
 }
 
 .all-foot h4{
     text-align: left;
 }
 footer div.icono{
-    font-size: 500%;
+    font-size: 500%;/*Los icono se comportan como parte de la fuente solo varian si le aplicas font-size*/
+    /*color: red;*/
     background-position: center center;
 }
+
+main{/*Principio de Microdesafio paso 1 11/09/2021 */
+    width: 90%;
+    padding: 40px;
+    margin: auto;
+}
+
+.products article{
+    margin: 10px;
+}
+.main-article{
+    border: solid 1px #ebebeb;
+    padding: 15px;
+}
+
+/* fin paso 1*/
+/*Paso 2*/
+
+@media (min-width: 361px){/*Tablet*/
+    .description{
+        display: none;
+    }
+    .navegacion{
+        display: none;
+    }
+}
+
+@media (min-width: 769px){/*desktop*/
+     .products article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .description{
+        display: block;
+    }
+    .navegacion{
+        display: block;
+    }
+     .burger-menu{
+         display: none;
+     }
+}
+/*Fin paso 2*/
+
+
