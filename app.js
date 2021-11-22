@@ -7,7 +7,7 @@ app.listen(3000, () => {
     console.log('Servidor funcionando')
 })
 
-app.get('/', (req,res) => {
+app.get('/home', (req,res) => {
     res.sendFile(__dirname + '/views/home.html');//cambia el path.resolve()
 })
 
@@ -17,4 +17,8 @@ app.get('/register', (req,res)=>{
 
 app.get('/login', (req,res)=>{
     res.sendFile(__dirname + '/views/login.html');
+});
+
+app.get('/sell', (req,res)=>{
+    res.sendFile(__dirname + '/views/sell.html');
 });

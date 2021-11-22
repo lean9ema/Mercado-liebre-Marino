@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mercado Liebre</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!--Favivon-->
+    <link rel="shortcut icon" href="images/ML-logo.jpg" alt= "logo página web MercadoLiebre">
 </head>
 <body>
     <header>
         <div class="top-header">
-            <div class="logo"><img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre"></div>
+            <div class="logo"><a href="/home"><img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre"></a></div>
             
-            <div class="form" action="#" method="GET"> <!--Buscador-->
-                <div class="input">Buscar productos, marcas y más</div>
-                <a class="submit"><i class="fa fa-search"></i></a>
+            <div>  <!--Buscador-->
+                <form action="post">
+                    <label for="search">
+                        <input type="search" name="search" id="search" placeholder="Buscar productos, marcas y más">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </label>
+                </form>
+                
             </div>
-        
-            <p class="copy-header"><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p><!--fas fa, le asigna iconos mediante all.min.css-->
+            <div>
+                <p class="copy-header"><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p><!--fas fa, le asigna iconos mediante all.min.css-->
+            </div>
+    
         </div>
         <nav class="navegacion">
             <ul class="acceso">
@@ -46,14 +55,12 @@
         <form action="/" method="POST">
             <div>
                 <label for="usuario">
-                    Usuario
-                    <input type="text" name="usuario" id="usuario" placeholder="usuari@" required>
+                    <input type="text" name="usuario" id="usuario" placeholder="Nombre se usuario" required>
                 </label>
             </div>
             <div>
                 <label for="clave">
-                    Contraseña
-                    <input type="password" name="contraseña" id="clave" required>
+                    <input type="password" name="contraseña" id="clave" placeholder="Ingrese la contraseña" required>
                 </label>
             </div>
             <div class="botones">
@@ -81,10 +88,9 @@
                 <h3>Seguridad de principio a fin</h3>
                 <p class="info-compra">¿No te gusta?¡Devolvelo!En Mercado Liebre,no hay nada que no puedas hacer, porque estás siempre protegid@.</p>  
             </article>
-
-            <article>
-                <h4>Copyright © 1999-2020 MercadoLiebre S.R.L.</h4>
-            </article>
+        </section>
+        <section class="copyright">
+            <h4>Copyright © 1999-2020 MercadoLiebre S.R.L.</h4>
         </section>
 
     </footer>

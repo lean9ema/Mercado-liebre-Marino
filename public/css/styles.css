@@ -10,7 +10,14 @@ body{
 }
 
 header{
-    background-color:#EAC926 ;
+    background-color: #fff159 ;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 10;
+}
+main{
+    margin-top: 200px;
 }
 
 h3{
@@ -21,7 +28,7 @@ p{
     font-size: 14px;
 }
 
-div.top-header{
+header div.top-header{
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -33,10 +40,19 @@ header div.logo{/*Saque la medida de html, le aplique porcentaje y lo centre*/
     width: 50%;
     margin: auto;
     padding: 4%;
-
+    animation: aumentar 1s ease-in  infinite alternate;
 }
 
-.copy-header{
+@keyframes aumentar{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+header .copy-header{
     max-width: 350px;
     text-align: right;
     margin: 0%;
@@ -92,11 +108,11 @@ header div.top-header p{
     margin-top: 10px;
 }
 
-div.burger-menu{
+header div.burger-menu{
     text-align: center;
 }
 
-div.burger-menu i{
+header div.burger-menu i{
     background-color: #0044AA;
     border-radius: 5px;
     color: #FFF;
@@ -107,7 +123,16 @@ div.burger-menu i{
     width: 40px;
 }
 
-.price{
+/*Home*/
+main section.banner img{
+    width: 100%;
+}
+
+main{
+    padding: 40px;
+}
+
+main section article .price{
     font-size: 18px;
 }
 
@@ -122,15 +147,11 @@ h3,
     color: #666;
 }
 
-section.banner img{
-    width: 100%;
-}
-
 
 main section article{
     background-color: #FFF;
-    
 }
+
 main section article div{
     position: relative;
 }
@@ -140,7 +161,7 @@ main section article img{
 }
 
 
-.discount, .fas.fa-truck{/**/
+.discount, .fas.fa-truck{
     color:#39b54a;
 }
 
@@ -156,14 +177,21 @@ main section article i{
     right: 20px;  
     top: -15px; 
 }
+
 main section article .description{
-    display: none;
-    transition: all 450ms;
+    opacity: 0%;
+    transition: all 400ms;
 }
 
-main section article .description:hover{
-    display: block;
+main section :hover .description{
+    opacity: 100%;
 }  
+
+.main-article{
+    border: solid 1px #ebebeb;
+    padding: 15px;
+}
+
 
 
 p.info-compra{
@@ -171,6 +199,7 @@ p.info-compra{
     font-size: 20px;
 }
 
+/*Footer*/
 .all-foot{
     text-align: center;
     line-height: 28px;
@@ -182,23 +211,21 @@ p.info-compra{
 }
 footer div.icono{
     font-size: 500%;/*Los icono se comportan como parte de la fuente solo varian si le aplicas font-size*/
-    /*color: red;*/
     background-position: center center;
+    color: #3483fa;
+}
+footer div.icono:hover{
+    color:#39b54a
 }
 
-main{/*Principio de Microdesafio paso 1 11/09/2021 */
-    width: 90%;
-    padding: 40px;
-    margin: auto;
-}
+footer div.icono
+
+
 
 .products article{
     margin: 10px;
 }
-.main-article{
-    border: solid 1px #ebebeb;
-    padding: 15px;
-}
+
 
 
 /*Register*/
@@ -233,13 +260,39 @@ main form .botones button {
     margin: 5px;
     width: 15%;
 }
+main form .botones button:hover{
+    background-color: #0022AA;
+    color: #FFF;
+}
+/*sell*/
+main .sell form div input,select,textarea {
+    margin: 5px;
+    width: 100%;
+}
+
+main .sell form div label{
+    font-style: italic;
+    display: block;
+}
+
+
 
 @media (min-width: 361px){/*Tablet*/
-    .copy-header{
-        max-width: 350px;
-        text-align: right;
-    }
     .description{
+        display: none;
+    }
+
+    main section article .price-discount{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+   
+    main section article p{
+        margin: 0 5px
+    }
+
+    header .burger-menu{
         display: none;
     }
     .navegacion{
@@ -253,17 +306,10 @@ main form .botones button {
     .products article{
         width: 45%;
     }
+    header div.top-header div{
+        width: 50%;
+    }
 
-    header div.top-header .logo{
-        width: 30%;
-        flex-grow: 1;
-    }
-    header div.top-header .form{
-        width: 30%;
-    }
-    header div.top-header p{
-        width: 30%;
-    }
 
     .navegacion{
         display: block;
@@ -278,9 +324,16 @@ main form .botones button {
         justify-content: space-around;
     }
 
+    main .sell form div input,select,textarea {
+        width: 30%;
+    }
+
 }
 
 @media (min-width: 769px){/*desktop*/
+    header div.top-header div{
+        width: 30%;
+    }
     main section article i{
         display: block;
     }
@@ -311,7 +364,7 @@ main form .botones button {
         font-size: 19px;
     }
 
-     .products article{
+     .products article:hover{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .description{
@@ -320,10 +373,7 @@ main form .botones button {
     .navegacion{
         display: block;
     }
-    main
-     .burger-menu{
-         display: none;
-     }
+    
      .products article{
         width: 20%;
     }
@@ -338,6 +388,23 @@ main form .botones button {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+    }
+    main section :hover i{
+        transition: 1s;
+        transform: rotate(-90deg);
+
+    }
+
+    footer .all-foot {
+        display: flex;
+    }
+
+    footer .all-foot article{
+        width: 100%;
+    }
+
+    footer .all-foot div{
+        align-self:stretch;
     }
 
 }
