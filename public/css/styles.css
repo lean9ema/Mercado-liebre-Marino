@@ -57,6 +57,11 @@ header .copy-header{
     text-align: right;
     margin: 0%;
 }
+header .top-header form .buscador{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .form{
     width: 50%;
@@ -292,9 +297,7 @@ main .sell form div label{
         margin: 0 5px
     }
 
-    header .burger-menu{
-        display: none;
-    }
+    
     .navegacion{
         display: none;
     }
@@ -311,12 +314,7 @@ main .sell form div label{
     }
 
 
-    .navegacion{
-        display: block;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+    
 
     .navegacion .acceso,.usuario{
         display: flex;
@@ -331,6 +329,15 @@ main .sell form div label{
 }
 
 @media (min-width: 769px){/*desktop*/
+    header .burger-menu{
+        display: none;
+    }
+    .navegacion{
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
     header div.top-header div{
         width: 30%;
     }
